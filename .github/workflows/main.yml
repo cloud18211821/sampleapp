@@ -1,0 +1,21 @@
+name: Main Workflow
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+ build_and_test:
+   name: Build and Test
+   runs-on: ubuntu-latest
+
+   steps:
+    - name: Checkout Code
+      uses: actions/checkout@v2
+
+    - name: Run Tests
+      run: echo "Running tests."
+
+    - name: Build Application
+      run: echo "Building the application."
